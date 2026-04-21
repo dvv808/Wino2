@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/2fa", "destination": "/2fa.html" },
+    { "source": "/loading", "destination": "/loading.html" }
+  ]
+}
