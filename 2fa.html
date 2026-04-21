@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wino 2FA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Syncopate&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="twofa-page">
+    <main class="page">
+      <a href="./index.html" aria-label="Go to login start page">
+        <img class="page-logo" src="./assets/Wino_Logo_Full.svg" alt="Wino logo" />
+      </a>
+
+      <section class="login-card">
+        <img class="card-login-icon" src="./assets/icon_2fa.png" alt="2FA icon" />
+        <h2 class="twofa-title">Zwei-Faktor-Authentifizierung</h2>
+        <p class="twofa-subtext">
+          Öffne deine <strong>Microsoft Authenticator App</strong> und gib den <strong>6-stelligen Code</strong> ein,
+          um deine Identität zu bestätigen.
+        </p>
+
+        <form class="login-form twofa-form" action="#" method="post">
+          <div class="twofa-code-row" aria-label="6-stelliger Code">
+            <div class="twofa-code-block">
+              <input class="otp-input" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Code Stelle 1" />
+              <input class="otp-input" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Code Stelle 2" />
+              <input class="otp-input" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Code Stelle 3" />
+            </div>
+            <div class="twofa-code-block">
+              <input class="otp-input" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Code Stelle 4" />
+              <input class="otp-input" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Code Stelle 5" />
+              <input class="otp-input" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Code Stelle 6" />
+            </div>
+          </div>
+
+          <button class="twofa-submit-button" type="submit">
+            <span class="button-spinner" aria-hidden="true"></span>
+            <img class="button-success-icon" src="./assets/icon_confirm.svg" alt="" aria-hidden="true" />
+            <span class="button-label">Bestätigen</span>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <a class="link-button link-button-small footer-link" href="#">Impressum</a>
+      <p>
+        <a class="footer-copyright-link" href="https://www.makler-winter.at/" target="_blank" rel="noopener noreferrer"
+          >&copy; 2026 Winter Versicherungsmakler</a
+        >
+      </p>
+    </footer>
+    <script>
+      (() => {
+        const form = document.querySelector(".twofa-form");
+        const submitButton = form?.querySelector(".twofa-submit-button");
+        const label = submitButton?.querySelector(".button-label");
+
+        if (!form || !submitButton || !label) return;
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          if (submitButton.classList.contains("is-loading") || submitButton.classList.contains("is-success")) return;
+
+          submitButton.classList.add("is-loading");
+          submitButton.disabled = true;
+          label.textContent = "Verifieng...";
+
+          window.setTimeout(() => {
+            submitButton.classList.remove("is-loading");
+            submitButton.classList.add("is-success");
+            label.textContent = "Success";
+
+            window.setTimeout(() => {
+              document.body.classList.add("is-page-fading");
+
+              window.setTimeout(() => {
+                window.location.href = "./loading.html";
+              }, 620);
+            }, 800);
+          }, 1800);
+        });
+      })();
+    </script>
+  </body>
+</html>

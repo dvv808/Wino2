@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wino Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Syncopate&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="ds-page">
+      <header class="ds-header">
+        <h1>Wino Design System</h1>
+        <p>Current implementation preview</p>
+      </header>
+
+      <section class="ds-section">
+        <h2>Brand Colors</h2>
+        <div class="ds-swatches">
+          <div class="ds-swatch">
+            <span class="ds-chip" style="background: #313537"></span>
+            <code>Main Dark #313537</code>
+          </div>
+          <div class="ds-swatch">
+            <span class="ds-chip ds-chip-bordered" style="background: #ffffff"></span>
+            <code>Main White #FFFFFF</code>
+          </div>
+          <div class="ds-swatch">
+            <span class="ds-chip" style="background: #d3e7f1"></span>
+            <code>Secondary Blue #D3E7F1</code>
+          </div>
+        </div>
+      </section>
+
+      <section class="ds-section">
+        <h2>Gradients</h2>
+        <div class="ds-gradients">
+          <div class="ds-gradient-card ds-dark-gradient">Main Dark Gradient</div>
+          <div class="ds-gradient-card ds-light-gradient">Light Blue Gradient</div>
+        </div>
+      </section>
+
+      <section class="ds-section">
+        <h2>Typography</h2>
+        <p class="ds-headline">Syncopate 27px Headline</p>
+        <p class="ds-medium">Fira Sans 15px Medium text</p>
+        <p class="ds-small">Fira Sans 13px Small text</p>
+        <p class="ds-xsmall">Fira Sans 11px XSmall text</p>
+      </section>
+
+      <section class="ds-section">
+        <h2>Components</h2>
+        <div class="login-card ds-card-preview">
+          <img class="card-login-icon" src="./assets/login_icon.png" alt="Login icon" />
+          <h1>Login</h1>
+          <img class="form-divider" src="./assets/form-divider.svg" alt="" aria-hidden="true" />
+          <form class="login-form" action="#" method="post">
+            <div class="field-group">
+              <label for="ds-email">E-Mail and Username</label>
+              <input id="ds-email" type="email" placeholder="you@example.com" />
+            </div>
+
+            <div class="field-group">
+              <label for="ds-password">Passwort</label>
+              <input id="ds-password" type="password" placeholder="Enter password" />
+            </div>
+
+            <button type="button">Sign in</button>
+            <div class="post-button-row">
+              <label class="toggle-field" for="ds-stay-signed-in">
+                <span class="toggle-switch">
+                  <input id="ds-stay-signed-in" type="checkbox" />
+                  <span class="toggle-track" aria-hidden="true"></span>
+                </span>
+                <span class="toggle-text">Angemeldet bleiben</span>
+              </label>
+              <a class="link-button link-button-small forgot-link" href="#">Passwort vergessen?</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

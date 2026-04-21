@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wino Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Syncopate&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <a href="./index.html" aria-label="Go to login start page">
+        <img class="page-logo" src="./assets/Wino_Logo_Full.svg" alt="Wino logo" />
+      </a>
+      <section class="login-card" id="login-card">
+        <img class="card-login-icon" src="./assets/login_icon.png" alt="Login icon" />
+        <h1>Login</h1>
+        <img class="form-divider" src="./assets/form-divider.svg" alt="" aria-hidden="true" />
+
+        <form class="login-form" action="./2fa.html" method="get">
+          <div class="field-group">
+            <label for="email">E-Mail and Username</label>
+            <input id="email" name="email" type="text" placeholder=" " />
+          </div>
+
+          <div class="field-group">
+            <label for="password">Passwort</label>
+            <input id="password" name="password" type="password" placeholder=" " />
+          </div>
+
+          <button id="sign-in-button" type="submit">Login</button>
+
+          <div class="post-button-row">
+            <label class="toggle-field" for="stay-signed-in">
+              <span class="toggle-switch">
+                <input id="stay-signed-in" name="staySignedIn" type="checkbox" />
+                <span class="toggle-track" aria-hidden="true"></span>
+              </span>
+              <span class="toggle-text">Angemeldet bleiben</span>
+            </label>
+
+            <a class="link-button link-button-small forgot-link" href="#">Passwort vergessen?</a>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <a class="link-button link-button-small footer-link" href="#">Impressum</a>
+      <p>
+        <a class="footer-copyright-link" href="https://www.makler-winter.at/" target="_blank" rel="noopener noreferrer"
+          >&copy; 2026 Winter Versicherungsmakler</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
