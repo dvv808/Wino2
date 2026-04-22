@@ -211,6 +211,24 @@ body::after {
   }
 }
 
+@keyframes loadingTopStrokesFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.55;
+  }
+}
+
+@keyframes loadingBottomStrokesFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
 @keyframes pageLogoIntro {
   0% {
     opacity: 0;
@@ -286,7 +304,7 @@ body::after {
 
 .loading-page .page-strokes {
   opacity: 0;
-  animation: pageElementFadeIn 1200ms ease-in-out 120ms forwards;
+  animation: loadingTopStrokesFadeIn 1200ms ease-in-out 120ms forwards;
 }
 
 .login-page .page-bottom-strokes,
@@ -305,7 +323,7 @@ body::after {
 
 .loading-page .page-bottom-strokes {
   opacity: 0;
-  animation: pageElementFadeIn 1400ms ease-in-out 220ms forwards;
+  animation: loadingBottomStrokesFadeIn 1400ms ease-in-out 220ms forwards;
 }
 
 .login-card {
