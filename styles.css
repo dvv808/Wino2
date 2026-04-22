@@ -284,6 +284,11 @@ body::after {
   opacity: 0.55;
 }
 
+.loading-page .page-strokes {
+  opacity: 0;
+  animation: pageElementFadeIn 1200ms ease-in-out 120ms forwards;
+}
+
 .login-page .page-bottom-strokes,
 .twofa-page .page-bottom-strokes,
 .loading-page .page-bottom-strokes {
@@ -296,6 +301,11 @@ body::after {
   pointer-events: none;
   z-index: 0;
   opacity: 0.5;
+}
+
+.loading-page .page-bottom-strokes {
+  opacity: 0;
+  animation: pageElementFadeIn 1400ms ease-in-out 220ms forwards;
 }
 
 .login-card {
