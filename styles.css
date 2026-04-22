@@ -146,7 +146,7 @@ body::after {
 }
 
 .loading-logo {
-  width: 160px;
+  width: 128px;
   height: auto;
   display: block;
   opacity: 0;
@@ -271,7 +271,8 @@ body::after {
 }
 
 .login-page .page-strokes,
-.twofa-page .page-strokes {
+.twofa-page .page-strokes,
+.loading-page .page-strokes {
   position: fixed;
   top: 0;
   left: 50%;
@@ -284,7 +285,8 @@ body::after {
 }
 
 .login-page .page-bottom-strokes,
-.twofa-page .page-bottom-strokes {
+.twofa-page .page-bottom-strokes,
+.loading-page .page-bottom-strokes {
   position: fixed;
   bottom: 0;
   left: 50%;
